@@ -1,4 +1,4 @@
-CREATE TABLE transaksi-details(
+CREATE TABLE transaksi_details(
 id  character varying(64) not null primary key,
 transaksi_id  character varying(64) not null,
 buku_id character varying(64) not null

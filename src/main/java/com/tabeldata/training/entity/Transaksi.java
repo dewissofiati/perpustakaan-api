@@ -25,7 +25,8 @@ public class Transaksi {
     @Column(name = "tanggal_pinjam", nullable = false)
     private Date tanggal;
 
-    @Column(name = "anggota_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "anggota_id", nullable = false)
     private Anggota anggota;
 
     @Column(name = "nama_petugas", nullable = false)
