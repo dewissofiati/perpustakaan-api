@@ -1,7 +1,7 @@
 CREATE TABLE transaksi(
   id  character varying(64) not null primary key,
   tanggal_pinjam date not null,
-  anggota_id character vaarying(64) not null,
+  anggota_id character varying(64) not null,
   nama_petugas character varying(100) not null,
   waktu_transaksi timestamp not null default now(),
   is_kembali boolean not null default false,
