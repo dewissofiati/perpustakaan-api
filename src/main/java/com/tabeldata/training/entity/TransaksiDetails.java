@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TransaksiDetails {
+
     private String id;
     private Transaksi transaksi;
     private Buku buku;
-
 }
