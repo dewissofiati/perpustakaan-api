@@ -1,4 +1,7 @@
 package com.tabeldata.training.repository;
 
-public interface BukuRepository {
+import com.tabeldata.training.entity.Penerbit;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+public interface PenerbitRepository extends PagingAndSortingRepository<Penerbit, String> {
 }
