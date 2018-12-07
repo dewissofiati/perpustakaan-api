@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-12-07T14:31:47 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="contoh" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4abfadd8-7ab9-4cbb-bb1e-db30d8e4c0a4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="nama" class="java.lang.String"/>
+	<parameter name="status" class="java.lang.Boolean"/>
+	<parameter name="saldo" class="java.math.BigDecimal"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="49" width="111" height="51" uuid="501dbc78-48a9-414f-82a4-2129282df50f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="0" width="121" height="51" uuid="483b6382-bb2f-41a1-956a-652a77b1ab4e"/>
+				<textFieldExpression><![CDATA["Contoh Judul"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="182" splitType="Stretch">
+			<textField>
+				<reportElement stretchType="ContainerBottom" x="66" y="29" width="100" height="30" uuid="4e36cf23-2bb1-4dac-9d60-20f27a64ad9a"/>
+				<textFieldExpression><![CDATA[$P{saldo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>
