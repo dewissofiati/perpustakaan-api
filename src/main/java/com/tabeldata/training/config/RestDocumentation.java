@@ -31,10 +31,10 @@ public class RestDocumentation {
                 "TITLE",
                 "DESCIPRION",
                 "VERSION",
-                "TERMS OF SERVICE URL",
+                "/swagger-ui.html",
                 new Contact("NAME", "URL", "EMAIL"),
                 "LICENSE",
-                "LICENSE URL",
+                "/swagger-ui.html",
                 Collections.emptyList()
         );
     }

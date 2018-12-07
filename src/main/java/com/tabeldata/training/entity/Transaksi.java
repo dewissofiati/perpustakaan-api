@@ -8,6 +8,8 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -40,4 +42,7 @@ public class Transaksi {
 
     @Column(name = "tanggal_kembali")
     private Timestamp tanggalKembali;
+
+    @OneToMany(mappedBy = "transaksi")
+    private List<TransaksiDetails> details = new ArrayList<>();
 }
