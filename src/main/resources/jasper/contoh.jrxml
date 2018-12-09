@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2018-12-07T14:31:47 -->
+<!-- 2018-12-09T09:18:29 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="contoh" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4abfadd8-7ab9-4cbb-bb1e-db30d8e4c0a4">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
-	<parameter name="nama" class="java.lang.String"/>
-	<parameter name="status" class="java.lang.Boolean"/>
-	<parameter name="saldo" class="java.math.BigDecimal"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[nama]]></fieldDescription>
+	</field>
+	<field name="lokasi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[lokasi]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
 		<band height="100" splitType="Stretch">
-			<textField pattern="MMMMM dd, yyyy">
+			<textField pattern="MMM d, yyyy h:mm:ss a z">
 				<reportElement x="430" y="49" width="111" height="51" uuid="501dbc78-48a9-414f-82a4-2129282df50f"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
@@ -24,12 +30,36 @@
 			</textField>
 		</band>
 	</title>
-	<pageHeader>
-		<band height="182" splitType="Stretch">
+	<columnHeader>
+		<band height="30">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="30" uuid="b65dc29b-6a2a-46c9-ac24-a8b73a1dcac7"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="30" uuid="c1ab716f-6e77-4f75-8781-67fd1de4b069"/>
+				<text><![CDATA[nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="30" uuid="b2aa9b55-9e4b-448d-9dd0-a0accc60c564"/>
+				<text><![CDATA[lokasi]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43">
 			<textField>
-				<reportElement stretchType="ContainerBottom" x="66" y="29" width="100" height="30" uuid="4e36cf23-2bb1-4dac-9d60-20f27a64ad9a"/>
-				<textFieldExpression><![CDATA[$P{saldo}]]></textFieldExpression>
+				<reportElement x="0" y="12" width="185" height="30" uuid="608143f7-ab63-46b1-935d-f120d220d1e2"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="12" width="185" height="30" uuid="6290dd8d-d791-47bb-ada4-cf89c1b318ff"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="12" width="185" height="30" uuid="5849b538-51be-48e1-828e-daa711cdf17c"/>
+				<textFieldExpression><![CDATA[$F{lokasi}]]></textFieldExpression>
 			</textField>
 		</band>
-	</pageHeader>
+	</detail>
 </jasperReport>
